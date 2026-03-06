@@ -1,6 +1,6 @@
 # NanoURL
 
-A minimal URL shortener project with a C++ backend and a React + TypeScript frontend.
+URL shortener with a C++ backend and a React + TypeScript frontend.
 
 ## Project Structure
 
