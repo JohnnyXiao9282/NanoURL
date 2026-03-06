@@ -2,12 +2,15 @@
 #include <string>
 #include <unordered_map>
 
+using namespace std;
+
 class UrlShortener {
-public:
-    std::string shorten(const std::string& longUrl);
-    std::string expand(const std::string& shortUrl) const;
 private:
-    std::unordered_map<std::string, std::string> shortToLong;
-    std::unordered_map<std::string, std::string> longToShort;
-    std::string generateShortUrl(const std::string& longUrl);
+    unordered_map<string, string> shortToLong;
+    unordered_map<string, string> longToShort;
+    string generateShortUrl(const string& longUrl);
+
+public:
+    string shorten(const string& longUrl);
+    string expand(const string& shortUrl) const;
 };
