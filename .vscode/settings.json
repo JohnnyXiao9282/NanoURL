@@ -54,6 +54,6 @@
     "algorithm": "cpp"
   },
   "code-runner.executorMap": {
-    "cpp": "cd backend/test && g++ -std=c++11 TestUrlShortener.cpp ../src/UrlShortener.cpp -o TestUrlShortener && ./TestUrlShortener"
+  "cpp": "cd /Users/yuxiao/NanoURL/backend/test && g++ -std=c++11 TestUrlShortener.cpp ../src/UrlShortener.cpp -o TestUrlShortener && ./TestUrlShortener"
   }
 }
