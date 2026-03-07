@@ -7,10 +7,10 @@ function App() {
         style={{
           width: "100%",
           height: "80px",
-          background: "linear-gradient(180deg, #e53935 0%, #1e88e5 100%)",
+          background: "linear-gradient(to right, #e53935 0%, #1e88e5 100%)",
           boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-          borderBottomLeftRadius: "24px",
-          borderBottomRightRadius: "24px",
+          borderBottomLeftRadius: "0",
+          borderBottomRightRadius: "0",
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
