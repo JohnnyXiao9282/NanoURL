@@ -17,7 +17,7 @@ const Coverter: React.FC = () => {
   return (
     <div style={{
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '100vh'
@@ -26,8 +26,14 @@ const Coverter: React.FC = () => {
         value={url}
         onChange={(e) => setUrl(e.target.value)}
         placeholder="Type your url"
+        style={{ width: '600px', height: '20px', marginRight: '12px' }}
       />
-      <button onClick={() => printUrl(url)}>Shorten</button>
+      <button onClick={() => printUrl(url)} 
+        style={
+            {width: '70px', height: '30px', fontSize: '14px', paddingTop: '6px', paddingLeft:'13px'}
+        }>Shorten
+            
+      </button>
     </div>
   );
 };

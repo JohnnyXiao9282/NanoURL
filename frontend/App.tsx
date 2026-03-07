@@ -2,9 +2,31 @@ import Converter from "./Converter/converter";
 
 function App() {
   return (
-    <div>
-      <Converter />
-    </div>
+    <>
+      <div
+        style={{
+          width: "100%",
+          height: "80px",
+          background: "linear-gradient(180deg, #e53935 0%, #1e88e5 100%)",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+          borderBottomLeftRadius: "24px",
+          borderBottomRightRadius: "24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          fontSize: "2rem",
+          color: "#fff",
+          fontWeight: "bold",
+          letterSpacing: "2px",
+          paddingLeft: "24px",
+        }}
+      >
+        NanoURL
+      </div>
+      <div>
+        <Converter />
+      </div>
+    </>
   );
 }
 
