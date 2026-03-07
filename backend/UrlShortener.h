@@ -11,6 +11,8 @@ private:
     string generateShortUrl(const string& longUrl);
 
 public:
-    string shorten(const string& longUrl);
-    string expand(const string& shortUrl) const;
+    virtual string shorten(const string& longUrl) = 0;
+    virtual string expand(const string& shortUrl) const = 0;
+    virtual string generateShortUrl(const string& longUrl) = 0;
+    virtual ~UrlShortener() = default;
 };
