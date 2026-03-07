@@ -13,6 +13,7 @@ class SimpleUrlShortener : public UrlShortener {
 private:
     unordered_map<string, string> shortToLong;
     unordered_map<string, string> longToShort;
+    
 public:
     string shorten(const string& longUrl) override {
         if (longToShort.count(longUrl)) {
