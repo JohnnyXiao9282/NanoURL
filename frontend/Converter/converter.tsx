@@ -5,6 +5,7 @@ const Converter: React.FC = () => {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const handleShorten = async () => {
     if (!url.trim()) {
@@ -18,9 +19,19 @@ const Converter: React.FC = () => {
         url,
       });
       setShortUrl(response.data.shortUrl);
+      setCopied(false);
     } catch {
       setError("Failed to shorten URL.");
       setShortUrl("");
+      setCopied(false);
+    }
+  };
+
+  const handleCopy = () => {
+    if (shortUrl) {
+      navigator.clipboard.writeText(shortUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
     }
   };
 
@@ -72,11 +83,9 @@ const Converter: React.FC = () => {
               borderRadius: 4,
               cursor: "pointer",
             }}
-            onClick={() => {
-              navigator.clipboard.writeText(shortUrl);
-            }}
+            onClick={handleCopy}
           >
-            Copy
+            {copied ? "Copied!" : "Copy"}
           </button>
         </div>
       )}

@@ -1,5 +1,16 @@
 {
+  "name": "nanourl-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "g++ -std=c++11 backend/src/server.cpp backend/src/UrlShortener.cpp -o backend/server && ./backend/server",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
   "dependencies": {
     "axios": "^1.13.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
