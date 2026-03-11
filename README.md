@@ -9,34 +9,36 @@ URL shortener with a C++ backend and a React + TypeScript frontend.
 
 ## Getting Started
 
-### Backend (C++)
-- Edit and build your C++ code in the `backend/` folder.
-- Example entry point: `main.cpp`
+### 1. Install dependencies (root and frontend)
+```bash
+npm install
+cd frontend && npm install
+```
 
-### Frontend (React + TypeScript)
-1. Go to the `frontend` directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open your browser to the local address shown in the terminal (usually `http://localhost:5173`).
+### 2. Download C++ dependencies
+- Download `httplib.h` from https://github.com/yhirose/cpp-httplib/blob/master/httplib.h and place it in `backend/src/`
+- Download `json.hpp` from https://github.com/nlohmann/json/releases and place it in `backend/src/nlohmann/`
+
+### 3. Run both frontend and backend together
+From the project root:
+```bash
+npm run dev
+```
+This will start both the C++ backend server and the React frontend concurrently.
+
+- The backend runs on [http://localhost:8080](http://localhost:8080)
+- The frontend runs on [http://localhost:5173](http://localhost:5173)
 
 ## Features
 - Enter a long URL and get a shortened version.
-- Copy the shortened URL with one click.
+- Copy the shortened URL with one click (shows "Copied!" feedback).
 - Simple, modern UI with a dark header.
+- CORS enabled for local development.
 
-## To Do
-- Connect frontend to backend API for real URL shortening.
-- Add persistent storage to backend (optional).
-- Deploy to production (optional).
+## Notes
+- The backend uses C++11 and requires `httplib.h` and `json.hpp` as described above.
+- The frontend uses React, TypeScript, Vite, and Axios.
+- All development can be run with a single command: `npm run dev`.
 
 ---
 
