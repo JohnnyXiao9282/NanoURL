@@ -5,6 +5,7 @@
 #include <iostream>
 
 using namespace httplib;
+using namespace std;
 using json = nlohmann::json;
 
 int main() {
@@ -21,8 +22,8 @@ int main() {
     svr.Post("/api/shorten", [&](const Request& req, Response& res) {
         try {
             auto j = json::parse(req.body);
-            std::string longUrl = j["url"];
-            std::string shortUrl = shortener.shorten(longUrl);
+            string longUrl = j["url"];
+            string shortUrl = shortener.shorten(longUrl);
             json resp = { {"shortUrl", shortUrl} };
             res.set_content(resp.dump(), "application/json");
             res.set_header("Access-Control-Allow-Origin", "*");
@@ -33,7 +34,7 @@ int main() {
         }
     });
 
-    std::cout << "Server running on http://localhost:8080" << std::endl;
+    cout << "Server running on http://localhost:8080" << endl;
     svr.listen("0.0.0.0", 8080);
     return 0;
 }

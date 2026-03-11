@@ -51,9 +51,24 @@
     "unordered_map": "cpp",
     "variant": "cpp",
     "vector": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "__tree": "cpp",
+    "any": "cpp",
+    "charconv": "cpp",
+    "condition_variable": "cpp",
+    "csignal": "cpp",
+    "forward_list": "cpp",
+    "fstream": "cpp",
+    "iomanip": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "regex": "cpp",
+    "set": "cpp",
+    "span": "cpp",
+    "unordered_set": "cpp",
+    "valarray": "cpp"
   },
   "code-runner.executorMap": {
-  "cpp": "cd /Users/yuxiao/NanoURL/backend/test && g++ -std=c++11 TestUrlShortener.cpp ../src/UrlShortener.cpp -o TestUrlShortener && ./TestUrlShortener"
+    "cpp": "cd /Users/yuxiao/NanoURL/backend/test && g++ -std=c++11 TestUrlShortener.cpp ../src/UrlShortener.cpp -o TestUrlShortener && ./TestUrlShortener"
   }
 }
